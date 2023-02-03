@@ -1,5 +1,5 @@
-const Patient = require("../models/patient");
-const Report = require("../models/report");
+const Patient = require("../models/Patient");
+const Report = require("../models/Report");
 const status = {
     N: "Negative",
     TQ: "Travelled-Quarantine",
