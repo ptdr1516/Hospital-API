@@ -1,4 +1,4 @@
-const Doctor = require("../models/doctor");
+const Doctor = require("../models/Doctor");
 const jwt = require("jsonwebtoken");
 
 //  Create a record for doctor in db by taking password, confirm password, username and name.
