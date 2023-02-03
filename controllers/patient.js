@@ -1,4 +1,4 @@
-const Patient = require("../models/patient");
+const Patient = require("../models/Patient");
 
 // Create a patient record getting phone number and
 // name only after authentication if patient already exist return patient

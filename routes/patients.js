@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const patientController = require("../controllers/patients_controller");
+const patientController = require("../controllers/patient");
 const passport = require("passport");
-const middleWare = require("../config/middleware-for-handling-error");
+const middleWare = require("../config/errorHandle");
 // route for registering patients
 router.post(
     "/register",

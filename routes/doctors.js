@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
-const doctorController = require("../controllers/doctors_controller");
-const middleWare = require("../config/middleware-for-handling-error");
+const doctorController = require("../controllers/doctor");
+const middleWare = require("../config/errorHandle");
 //register the doctor
 router.post("/register", doctorController.create);
 

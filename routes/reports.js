@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
-const middleWare = require("../config/middleware-for-handling-error");
+const middleWare = require("../config/errorHandle");
 
-const reportController = require("../controllers/reports_controller");
+const reportController = require("../controllers/report");
 
 //creating route for report
 
