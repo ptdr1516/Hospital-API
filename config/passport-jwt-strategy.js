@@ -3,13 +3,14 @@ const JWTStrategy = require("passport-jwt").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
 const Doctor = require("../models/Doctor");
 
-//extract token from header
+// Extracting token from header
 let opts = {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: "secret",
 };
 console.log(opts.jwtFromRequest);
-//authenticate using jwt
+
+// Authenticate using jwt
 passport.use(
     new JWTStrategy(opts, async function (jwtPayload, done) {
         Doctor.findById(jwtPayload._id, "email name", function (err, doctor) {

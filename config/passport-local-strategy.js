@@ -2,7 +2,7 @@ const passport = require("passport");
 const localStrategy = require("passport-local").Strategy;
 const Doctor = require("../models/Doctor");
 
-// authentication with local strategy
+// Authentication with local strategy
 passport.use(
     new localStrategy(
         {

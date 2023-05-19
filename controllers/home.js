@@ -1,5 +1,5 @@
 module.exports.home = function (req, res) {
     return res.end(
-        "<h1>Express is up and running you can check your api on postman</h1>"
+        "<h1>Server is up and running (For checking API Endpoints use Postman)</h1>"
     );
 };

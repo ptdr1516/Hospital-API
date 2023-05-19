@@ -2,7 +2,6 @@ const Doctor = require("../models/Doctor");
 const jwt = require("jsonwebtoken");
 
 //  Create a record for doctor in db by taking password, confirm password, username and name.
-
 module.exports.create = async function (req, res) {
     console.log(req.body);
     if (req.body["password"] != req.body["confirm-password"]) {
@@ -15,7 +14,7 @@ module.exports.create = async function (req, res) {
     try {
         let doctor = await Doctor.findOne({ email: req.body.email });
         console.log("doctor", doctor);
-        // if doctor exists the render the login page
+        // if doctor exists then render the login page
         if (doctor) {
             return res.status(409).json({
                 message: "Already Registered, Please Login to Continue !!",
@@ -24,7 +23,7 @@ module.exports.create = async function (req, res) {
                 },
             });
         } else {
-            //create doctor
+            //register doctor
             doctor = await Doctor.create(req.body);
 
             return res.status(200).json({
